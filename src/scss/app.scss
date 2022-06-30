@@ -1,0 +1,29 @@
+@import "./variables";
+@import "./btn";
+@import "./counter";
+@import "./header";
+@import "./catalog";
+@import "./product";
+@import "./cart";
+@import "./cart-dd";
+@import "./cart-product";
+@import "./form-order";
+@import "./menu";
+
+.app {
+  padding-bottom: 200px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.content {
+  padding-top: 32px;
+}
+
+.field {
+  margin-bottom: 32px;
+}

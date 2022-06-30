@@ -1,0 +1,42 @@
+.product {
+  position: relative;
+
+  &:hover {
+    .product {
+      &_actions {
+        opacity: 1;
+        visibility: visible;
+        transition: opacity 0.275s, visibility 0.275s;
+      }
+    }
+  }
+
+  &_actions {
+    position: absolute;
+    top: 0;
+    right: 0;
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  &_btn {
+    background: none;
+    border: 0;
+    outline: none;
+    padding: 10px;
+    cursor: pointer;
+  }
+
+  &_img {
+    margin-bottom: 10px;
+  }
+  &_desc {
+    p {
+      color: #888;
+    }
+  }
+  &_price {
+    font-size: var(--fs-medium);
+    font-weight: var(--fw-medium);
+  }
+}

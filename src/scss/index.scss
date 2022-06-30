@@ -1,0 +1,163 @@
+@import-normalize;
+@import "./variables";
+
+:root {
+  --font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+    "Helvetica Neue", sans-serif;
+  --fw-normal: 400;
+  --fw-medium: 500;
+  --fw-semibold: 600;
+
+  --fs-normal: 14px;
+  --fs-medium: 24px;
+  --fs-semibold: 36px;
+
+  --fs-normal-xs: 12px;
+  --fs-medium-xs: 18px;
+  --fs-semibold-xs: 24px;
+
+  --base-gap: 16px;
+
+  --light-gray: #f7f6f6;
+  --gray: #ccc;
+  --dark-gray: #888;
+}
+
+*,
+:after,
+:before {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-family);
+  font-weight: var(--fw-normal);
+  font-size: var(--fs-normal);
+  line-height: 1.2;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+img,
+svg {
+  vertical-align: middle;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3 {
+  margin-top: 0;
+  margin-bottom: var(--base-gap);
+}
+
+h2 {
+  font-size: var(--fs-medium);
+  font-weight: var(--fw-medium);
+  line-height: 1.2;
+}
+
+input {
+  width: 100%;
+  background: none;
+  border: 0;
+  border-bottom: 1px solid #cacdd8;
+  font-size: var(--fs-normal);
+  padding: 4px 0 4px 0;
+  color: #000;
+  outline: none;
+  font-family: var(--font-family);
+
+  &:focus {
+    border-color: #000;
+  }
+
+  &::placeholder {
+    color: #000;
+    opacity: 1;
+  }
+}
+
+select {
+  user-select: none;
+  appearance: none;
+  background-color: transparent;
+  border: none;
+  padding: 10px 42px 10px 95px;
+  margin: 0;
+  width: 100%;
+  font-family: inherit;
+  font-size: inherit;
+  cursor: inherit;
+  line-height: inherit;
+  outline: none;
+  grid-area: select;
+
+  &[multiple] {
+    padding-right: 0;
+  }
+
+  &[multiple] option {
+    white-space: normal;
+  }
+}
+
+.select {
+  display: grid;
+  grid-template-areas: "select";
+  width: 100%;
+  min-width: 15ch;
+  max-width: 288px;
+  border: 1px solid #c4c4c4;
+  border-radius: 20px;
+  font-size: 16px;
+  cursor: pointer;
+  line-height: 1.1;
+  background-color: #fff;
+  align-items: center;
+
+  &--disabled {
+    cursor: not-allowed;
+    background-color: #eee;
+  }
+
+  &_placeholder {
+    grid-area: select;
+    justify-self: start;
+    margin-left: 14px;
+  }
+
+  &:not(.select--multiple)::after {
+    content: "";
+    width: 18px;
+    height: 8px;
+    background-color: #000;
+    clip-path: polygon(100% 0%, 0 0%, 50% 100%);
+    grid-area: select;
+    justify-self: end;
+    margin-right: 22px;
+    pointer-events: none;
+  }
+
+  &:hover {
+    &::after {
+      background-color: #c4c4c4;
+    }
+  }
+}

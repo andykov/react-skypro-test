@@ -1,0 +1,37 @@
+.form-order {
+  background-color: var(--light-gray);
+  border-radius: 20px;
+  padding: 26px;
+  padding-bottom: 148px;
+
+  &_title {
+    font-size: var(--fs-medium);
+    font-weight: var(--fw-semibold);
+    text-align: center;
+    margin-bottom: 32px;
+  }
+
+  &_fields {
+    max-width: 288px;
+  }
+
+  &_total-price {
+    font-size: var(--fs-medium);
+
+    span {
+      font-weight: var(--fw-medium);
+    }
+  }
+
+  &_bottom {
+    text-align: center;
+    padding-top: 32px;
+  }
+
+  .btn {
+    width: 100%;
+    max-width: 290px;
+    font-size: 16px;
+    margin-top: 18px;
+  }
+}

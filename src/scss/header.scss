@@ -1,0 +1,27 @@
+.header {
+  @media screen and (max-width: $screen-md-max) {
+    background-color: #ccc;
+    padding-top: 32px;
+  }
+
+  &_inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 0;
+
+    @media screen and (min-width: $screen-md) {
+      background-color: #ccc;
+    }
+  }
+
+  .link-logo {
+    font-size: 16px;
+    font-weight: var(--fw-semibold);
+    color: #fff;
+
+    @media screen and (min-width: $screen-md) {
+      font-size: var(--fs-semibold);
+    }
+  }
+}
